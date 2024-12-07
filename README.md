@@ -15,6 +15,25 @@
 
 <p align="center">⚡ The AppFlowy Cloud written with Rust 🦀</p>
 
+# Fork improvements
+- Cerbot integration approach added: [README](./certot/README.md)
+- `docker-compose.yml` upgraded: 
+  - Correct `depend_on` directives were added to everything without errors
+  - Forgotten parameter `APPFLOWY_MAILER_SMTP_EMAIL` added. Without it some weird sender address on `@example.com` domain was used, what were causing sending errors on smtp server.
+
+# Recommendation
+
+Free smtp account can be registered on [smtp2go](https://www.smtp2go.com/) service (it has restrictions of course). Example of `.env` file with that config:
+
+```bash
+APPFLOWY_MAILER_SMTP_HOST=mail.smtp2go.com
+APPFLOWY_MAILER_SMTP_PORT=465
+APPFLOWY_MAILER_SMTP_USERNAME=<username>
+APPFLOWY_MAILER_SMTP_PASSWORD=<password>
+APPFLOWY_MAILER_SMTP_EMAIL=info@<domain_name>
+APPFLOWY_MAILER_SMTP_ADMIN_EMAIL=admin@<domain_name>
+```
+
 # AppFlowy Cloud
 
 AppFlowy Cloud is part of the AppFlowy ecosystem, offering secure user authentication, file storage,
