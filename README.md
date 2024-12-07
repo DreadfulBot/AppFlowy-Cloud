@@ -16,7 +16,7 @@
 <p align="center">⚡ The AppFlowy Cloud written with Rust 🦀</p>
 
 # Fork improvements
-- Cerbot integration approach added: [README](./certot/README.md)
+- Cerbot integration approach added: [README](./certbot/README.md)
 - `docker-compose.yml` upgraded: 
   - Correct `depend_on` directives were added to everything without errors
   - Forgotten parameter `APPFLOWY_MAILER_SMTP_EMAIL` added. Without it some weird sender address on `@example.com` domain was used, what were causing sending errors on smtp server.
